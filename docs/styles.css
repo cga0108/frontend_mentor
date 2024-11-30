@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    min-height: 100vh;      /* Ensures the body takes up the full viewport height */
+    margin: 0;              /* Removes default margin */
+}
+
+main {
+    margin: 10px;
+}
+
+/* Centering and aligning text */
+h1, p, h3 {
+    text-align: center;
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+}
+
+.gray {
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+    line-height: normal;
+}
+
+.text {
+   display:block;
+}
+
+ svg {
+    margin-left: 275px;
+}
+
+/* Flex container for cards */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: flex-start; /* Align cards at the top */
+    justify-content: center; /* Center the cards */
+    gap: 25px; /* Add consistent space between cards */
+    margin-top: 50px; /* Add spacing above the entire container */
+}
+
+/* Card styles */
+.container1, .container2, .container3, .container4 {
+    display: grid; /* Center content inside each card */
+    background-color: white;
+    height: 200px;
+    width: 350px;
+    padding: 15px; /* Add inner spacing for better readability */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Top border colors */
+.container1 {
+    border-top: 5px solid #007BFF;
+    margin-top: 125px;
+}
+
+.container2 {
+    border-top: 5px solid red;
+}
+
+.container3 {
+    border-top: 5px solid yellow;
+}
+
+.container4 {
+    border-top: 5px solid blue;
+    margin-top: 125px;
+}
+
+/* Grid layout adjustments */
+.grid {
+    display: grid;
+    gap: 25px; /* Space between cards in the grid */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically */
+    }
+    .container1, .container2, .container3, .container4 {
+        width: 90%; /* Make cards more fluid on smaller screens */
+        margin: 10px auto; /* Center cards */
+    }
+}
